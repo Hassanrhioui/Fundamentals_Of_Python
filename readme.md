@@ -49,5 +49,4 @@ Small programs that apply these concepts in real scenarios.
 
 ---
 
-## 📂 Repository Structure
 
