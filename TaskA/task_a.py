@@ -1,3 +1,14 @@
+# Copyright (c) 2025 Ville Heikkiniemi
+#
+# This code is licensed under the MIT License.
+# You are free to use, modify, and distribute this code,
+# provided that the original copyright notice is retained.
+#
+# See LICENSE file in the project root for full license information.
+
+# Modified by Hassan Rhioui according to given task
+
+
 from datetime import datetime
 
 def main():
@@ -8,11 +19,12 @@ def main():
 # we use "|" to split the reservation string into a list
     reservation = reservation.split("|")
     
-# theses variables are using elements from the reservation list that is in reservations.txt
+# these variables are using elements from the reservation list that is in reservations.txt
 # each element is separated by a "|"
 # each is stored in an indexed position in the list
     reservation_number = int(reservation[0])
 # we use int() to convert the reservation number from string to integer
+
     booker = reservation[1]
 
 #we use datetime.strptime() to convert the date and time strings into date and time objects
