@@ -10,76 +10,121 @@
 
 
 from datetime import datetime
-"""Print reservation number."""
-def print_reservstion_number(reservation: list) -> None: 
-    number = int(reservation[0])
-    print(f"Reservation number: {number}")
+
+
+def print_reservation_number(reservation: list) -> None:
+    """
+    Prints the reservation number.
+
+    Parameters:
+    reservation (list): reservation data split by |
+    """
+    reservation_id = int(reservation[0])
+    print(f"Reservation number: {reservation_id}")
 
 
 def print_booker(reservation: list) -> None:
+    """
+    Prints the booker name.
+    """
     booker = reservation[1]
     print(f"Booker: {booker}")
 
-def print_dates(reservation: list) -> None:
-    date =datetime.strptime(reservation[2], "%Y-%m-%d").date()
-    finnish_date = date.strftime("%d.%m.%Y")
-    print(f"Date: {finnish_date}")
+
+def print_date(reservation: list) -> None:
+    """
+    Prints the reservation date in Finnish format.
+    """
+    day = datetime.strptime(reservation[2], "%Y-%m-%d").date()
+    finnish_day = day.strftime("%d.%m.%Y")
+    print(f"Date: {finnish_day}")
+
 
 def print_start_time(reservation: list) -> None:
+    """
+    Prints the start time.
+    """
     time = datetime.strptime(reservation[3], "%H:%M").time()
     finnish_time = time.strftime("%H.%M")
     print(f"Start time: {finnish_time}")
 
+
 def print_hours(reservation: list) -> None:
+    """
+    Prints the number of hours.
+    """
     hours = int(reservation[4])
     print(f"Hours: {hours}")
 
+
 def print_hourly_price(reservation: list) -> None:
+    """
+    Prints the hourly price.
+    """
     price = float(reservation[5])
-    price_output = f"{price:.2f}" .replace(".",",") + "€"
-    print(f"Hourly price: {price_output}")
+    price_text = f"{price:.2f}".replace(".", ",") + " €"
+    print(f"Hourly price: {price_text}")
 
 
 def print_total_price(reservation: list) -> None:
+    """
+    Prints the total price.
+    """
     hours = int(reservation[4])
     price = float(reservation[5])
     total_price = hours * price
-    total_price_output = f"{total_price:.2f}" .replace(".",",") + "€"
-    print(f"Total price: {total_price_output}")
+    total_text = f"{total_price:.2f}".replace(".", ",") + " €"
+    print(f"Total price: {total_text}")
+
 
 def print_paid(reservation: list) -> None:
-    paid = reservation[6]
-    is_paid = paid == "True"
+    """
+    Prints payment status.
+    """
+    paid = reservation[6] == "True"
 
-    if is_paid:
+    if paid:
         print("Paid: Yes")
     else:
         print("Paid: No")
 
+
 def print_location(reservation: list) -> None:
+    """
+    Prints the location.
+    """
     location = reservation[7]
     print(f"Location: {location}")
 
+
 def print_phone(reservation: list) -> None:
+    """
+    Prints the phone number.
+    """
     phone = reservation[8]
     print(f"Phone: {phone}")
 
+
 def print_email(reservation: list) -> None:
+    """
+    Prints the email address.
+    """
     email = reservation[9]
     print(f"Email: {email}")
 
 
-
 def main() -> None:
+    """
+    Reads the reservation file and prints all reservation details.
+    """
     with open("reservations.txt", "r") as file:
         line = file.readline().strip()
 
     reservation = line.split("|")
 
-
-    print_reservstion_number(reservation)
+    print_reservation_number(reservation)
     print_booker(reservation)
-    print_dates(reservation)
+    print_date(reservation)
     print_start_time(reservation)
     print_hours(reservation)
     print_hourly_price(reservation)
@@ -91,4 +136,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-        main()
+    main()
