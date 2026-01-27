@@ -45,7 +45,19 @@ This project serves as:
 - Defensive programming  
 
 ### ✔️ Mini‑Projects
-Small programs that apply these concepts in real scenarios.
+Small programs that apply these concepts in practical scenarios
+
+## 📝 Tasks Completed
+
+### Task A – Basic Input & Output
+Simple programs practicing variables, printing, and user interaction.
+
+### Task B – File Reading & Printing
+Reading reservation data from a file and printing formatted output.
+
+### Task C – Data Conversion & Summaries
+Converting raw text data into Python types and generating summaries using loops and conditionals.
+
 
 ---
 
