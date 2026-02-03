@@ -23,7 +23,7 @@ def read_data(filename: str) -> list:
 
             data.append([
                 timestamp,
-                float(row[1]),
+                float(row[1]), 
                 float(row[2]),
                 float(row[3]),
                 float(row[4]),
