@@ -1,0 +1,5 @@
+-----------------------------------------------------
+Report for the month: March
+- Total consumption: 800,16 kWh
+- Total production: 152,52 kWh
+- Average temperature: 2,06 °C
